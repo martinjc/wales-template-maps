@@ -43,6 +43,7 @@
         let height = 600;
 
         let svg = d3.select('#wpc_map').append('svg').attr("width",width).attr('height', height);
+        let g = svg.append('g');
 
         let projection = d3.geoMercator();
         let path = d3.geoPath().projection(projection);
@@ -55,10 +56,24 @@
 
             d3.select('#info')
                 .classed('active', false);
-
+            
+            svg.transition().duration(500).call(
+                zoom.transform,
+                d3.zoomIdentity,
+                d3.zoomTransform(svg.node()).invert([width / 2, height / 2])
+            );
         }
 
         function clicked(event, d) {
+            const [[x0, y0], [x1, y1]] = path.bounds(d);
+            svg.transition().duration(500).call(
+                zoom.transform,
+                d3.zoomIdentity
+                    .translate(width / 2, height / 2)
+                    .scale(Math.min(8, 0.9 / Math.max((x1 - x0) / width, (y1 - y0) / height)))
+                    .translate(-(x0 + x1) / 2, -(y0 + y1) / 2),
+                    d3.pointer(event, svg.node())
+            );
             if(active.node() === this) {
                 reset(event, d);
             } else {
@@ -76,6 +91,16 @@
             }
         }
 
+        function zoomed(event) {
+            const {transform} = event;
+            g.attr("transform", transform);
+            g.attr("stroke-width", 1 / transform.k);
+        }
+
+        const zoom = d3.zoom()
+            .scaleExtent([1, 8])
+            .on("zoom", zoomed);
+
         Promise.all([
             d3.json('data/wards_wales.topojson'),
         ]).then(([wpc_boundaries]) => {
@@ -84,7 +109,7 @@
 
             projection.fitSize([width, height], wpc);
 
-            svg.selectAll('path')
+            g.selectAll('path')
                 .data(wpc.features)
                 .join((enter) => {
                     enter.append('path')
@@ -94,6 +119,9 @@
                     .attr('stroke-width', '1px')
                     .on('click', clicked);
                 });
+            
+            svg.call(zoom);
+
         });
 
     </script>
