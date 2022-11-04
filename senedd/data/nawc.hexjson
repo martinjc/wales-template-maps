@@ -1,0 +1,325 @@
+{
+    "layout": "odd-r",
+    "hexes": {
+        "W09000001": {
+            "n": "Ynys Môn",
+            "nawc21cd": "W09000001",
+            "nawc21nm": "Ynys Môn",
+            "name": "Ynys Môn",
+            "q": 5,
+            "r": 7
+        },
+        "W09000002": {
+            "n": "Arfon",
+            "nawc21cd": "W09000002",
+            "nawc21nm": "Arfon",
+            "name": "Arfon",
+            "q": 6,
+            "r": 6
+        },
+        "W09000003": {
+            "n": "Aberconwy",
+            "nawc21cd": "W09000003",
+            "nawc21nm": "Aberconwy",
+            "name": "Aberconwy",
+            "q": 7,
+            "r": 6
+        },
+        "W09000004": {
+            "n": "Clwyd West",
+            "nawc21cd": "W09000004",
+            "nawc21nm": "Clwyd West",
+            "name": "Clwyd West",
+            "q": 8,
+            "r": 6
+        },
+        "W09000005": {
+            "n": "Vale of Clwyd",
+            "nawc21cd": "W09000005",
+            "nawc21nm": "Vale of Clwyd",
+            "name": "Vale of Clwyd",
+            "q": 7,
+            "r": 7
+        },
+        "W09000006": {
+            "n": "Delyn",
+            "nawc21cd": "W09000006",
+            "nawc21nm": "Delyn",
+            "name": "Delyn",
+            "q": 8,
+            "r": 7
+        },
+        "W09000007": {
+            "n": "Alyn and Deeside",
+            "nawc21cd": "W09000007",
+            "nawc21nm": "Alyn and Deeside",
+            "name": "Alyn and Deeside",
+            "q": 9,
+            "r": 7
+        },
+        "W09000008": {
+            "n": "Wrexham",
+            "nawc21cd": "W09000008",
+            "nawc21nm": "Wrexham",
+            "name": "Wrexham",
+            "q": 9,
+            "r": 6
+        },
+        "W09000009": {
+            "n": "Clwyd South",
+            "nawc21cd": "W09000009",
+            "nawc21nm": "Clwyd South",
+            "name": "Clwyd South",
+            "q": 9,
+            "r": 5
+        },
+        "W09000010": {
+            "n": "Dwyfor Meirionnydd",
+            "nawc21cd": "W09000010",
+            "nawc21nm": "Dwyfor Meirionnydd",
+            "name": "Dwyfor Meirionnydd",
+            "q": 8,
+            "r": 5
+        },
+        "W09000011": {
+            "n": "Montgomeryshire",
+            "nawc21cd": "W09000011",
+            "nawc21nm": "Montgomeryshire",
+            "name": "Montgomeryshire",
+            "q": 9,
+            "r": 4
+        },
+        "W09000012": {
+            "n": "Ceredigion",
+            "nawc21cd": "W09000012",
+            "nawc21nm": "Ceredigion",
+            "name": "Ceredigion",
+            "q": 8,
+            "r": 4
+        },
+        "W09000014": {
+            "n": "Preseli Pembrokeshire",
+            "nawc21cd": "W09000014",
+            "nawc21nm": "Preseli Pembrokeshire",
+            "name": "Preseli Pembrokeshire",
+            "q": 2,
+            "r": 2
+        },
+        "W09000015": {
+            "n": "Carmarthen East and Dinefwr",
+            "nawc21cd": "W09000015",
+            "nawc21nm": "Carmarthen East and Dinefwr",
+            "name": "Carmarthen East and Dinefwr",
+            "q": 4,
+            "r": 1
+        },
+        "W09000016": {
+            "n": "Carmarthen West and South Pembrokeshire",
+            "nawc21cd": "W09000016",
+            "nawc21nm": "Carmarthen West and South Pembrokeshire",
+            "name": "Carmarthen West and South Pembrokeshire",
+            "q": 3,
+            "r": 1
+        },
+        "W09000017": {
+            "n": "Llanelli",
+            "nawc21cd": "W09000017",
+            "nawc21nm": "Llanelli",
+            "name": "Llanelli",
+            "q": 3,
+            "r": 0
+        },
+        "W09000018": {
+            "n": "Gower",
+            "nawc21cd": "W09000018",
+            "nawc21nm": "Gower",
+            "name": "Gower",
+            "q": 4,
+            "r": -1
+        },
+        "W09000019": {
+            "n": "Swansea West",
+            "nawc21cd": "W09000019",
+            "nawc21nm": "Swansea West",
+            "name": "Swansea West",
+            "q": 4,
+            "r": 0
+        },
+        "W09000020": {
+            "n": "Swansea East",
+            "nawc21cd": "W09000020",
+            "nawc21nm": "Swansea East",
+            "name": "Swansea East",
+            "q": 5,
+            "r": 0
+        },
+        "W09000021": {
+            "n": "Neath",
+            "nawc21cd": "W09000021",
+            "nawc21nm": "Neath",
+            "name": "Neath",
+            "q": 5,
+            "r": 1
+        },
+        "W09000022": {
+            "n": "Aberavon",
+            "nawc21cd": "W09000022",
+            "nawc21nm": "Aberavon",
+            "name": "Aberavon",
+            "q": 6,
+            "r": 0
+        },
+        "W09000023": {
+            "n": "Bridgend",
+            "nawc21cd": "W09000023",
+            "nawc21nm": "Bridgend",
+            "name": "Bridgend",
+            "q": 6,
+            "r": -1
+        },
+        "W09000025": {
+            "n": "Rhondda",
+            "nawc21cd": "W09000025",
+            "nawc21nm": "Rhondda",
+            "name": "Rhondda",
+            "q": 6,
+            "r": 1
+        },
+        "W09000026": {
+            "n": "Cynon Valley",
+            "nawc21cd": "W09000026",
+            "nawc21nm": "Cynon Valley",
+            "name": "Cynon Valley",
+            "q": 7,
+            "r": 2
+        },
+        "W09000029": {
+            "n": "Cardiff West",
+            "nawc21cd": "W09000029",
+            "nawc21nm": "Cardiff West",
+            "name": "Cardiff West",
+            "q": 8,
+            "r": -1
+        },
+        "W09000031": {
+            "n": "Cardiff Central",
+            "nawc21cd": "W09000031",
+            "nawc21nm": "Cardiff Central",
+            "name": "Cardiff Central",
+            "q": 9,
+            "r": -1
+        },
+        "W09000034": {
+            "n": "Monmouth",
+            "nawc21cd": "W09000034",
+            "nawc21nm": "Monmouth",
+            "name": "Monmouth",
+            "q": 10,
+            "r": 1
+        },
+        "W09000035": {
+            "n": "Caerphilly",
+            "nawc21cd": "W09000035",
+            "nawc21nm": "Caerphilly",
+            "name": "Caerphilly",
+            "q": 7,
+            "r": 1
+        },
+        "W09000036": {
+            "n": "Islwyn",
+            "nawc21cd": "W09000036",
+            "nawc21nm": "Islwyn",
+            "name": "Islwyn",
+            "q": 8,
+            "r": 1
+        },
+        "W09000037": {
+            "n": "Torfaen",
+            "nawc21cd": "W09000037",
+            "nawc21nm": "Torfaen",
+            "name": "Torfaen",
+            "q": 9,
+            "r": 1
+        },
+        "W09000038": {
+            "n": "Blaenau Gwent",
+            "nawc21cd": "W09000038",
+            "nawc21nm": "Blaenau Gwent",
+            "name": "Blaenau Gwent",
+            "q": 9,
+            "r": 2
+        },
+        "W09000039": {
+            "n": "Newport West",
+            "nawc21cd": "W09000039",
+            "nawc21nm": "Newport West",
+            "name": "Newport West",
+            "q": 9,
+            "r": 0
+        },
+        "W09000040": {
+            "n": "Newport East",
+            "nawc21cd": "W09000040",
+            "nawc21nm": "Newport East",
+            "name": "Newport East",
+            "q": 10,
+            "r": 0
+        },
+        "W09000041": {
+            "n": "Brecon and Radnorshire",
+            "nawc21cd": "W09000041",
+            "nawc21nm": "Brecon and Radnorshire",
+            "name": "Brecon and Radnorshire",
+            "q": 9,
+            "r": 3
+        },
+        "W09000042": {
+            "n": "Cardiff North",
+            "nawc21cd": "W09000042",
+            "nawc21nm": "Cardiff North",
+            "name": "Cardiff North",
+            "q": 8,
+            "r": 0
+        },
+        "W09000043": {
+            "n": "Cardiff South and Penarth",
+            "nawc21cd": "W09000043",
+            "nawc21nm": "Cardiff South and Penarth",
+            "name": "Cardiff South and Penarth",
+            "q": 7,
+            "r": -2
+        },
+        "W09000044": {
+            "n": "Merthyr Tydfil and Rhymney",
+            "nawc21cd": "W09000044",
+            "nawc21nm": "Merthyr Tydfil and Rhymney",
+            "name": "Merthyr Tydfil and Rhymney",
+            "q": 8,
+            "r": 2
+        },
+        "W09000045": {
+            "n": "Ogmore",
+            "nawc21cd": "W09000045",
+            "nawc21nm": "Ogmore",
+            "name": "Ogmore",
+            "q": 7,
+            "r": -1
+        },
+        "W09000046": {
+            "n": "Pontypridd",
+            "nawc21cd": "W09000046",
+            "nawc21nm": "Pontypridd",
+            "name": "Pontypridd",
+            "q": 7,
+            "r": 0
+        },
+        "W09000047": {
+            "n": "Vale of Glamorgan",
+            "nawc21cd": "W09000047",
+            "nawc21nm": "Vale of Glamorgan",
+            "name": "Vale of Glamorgan",
+            "q": 6,
+            "r": -2
+        }
+    }
+}
