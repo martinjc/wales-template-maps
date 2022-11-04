@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//d3js.org/d3.v6.min.js"></script>
     <script src="//unpkg.com/topojson@3"></script>
-    <title>Wales Unitary Authority Boundaries</title>
+    <title>Wales Westminster Parliamentary Constituencies Boundaries</title>
     <style>
         html,
         body {
@@ -34,15 +34,15 @@
     </style>
 </head>
 <body>
-    <div id='ua_map'></div>
+    <div id='wpc_map'></div>
     <div id="info">
-        <h1>This is <span id="ua_name"></span> (<span id="ua_ons_cd"></span>)</h1>
+        <h1>This is <span id="wpc_name"></span> (<span id="wpc_ons_cd"></span>)</h1>
     </div>    <script>
 
-        let width = d3.select('#ua_map').node().clientWidth;
+        let width = d3.select('#wpc_map').node().clientWidth;
         let height = 600;
 
-        let svg = d3.select('#ua_map').append('svg').attr("width",width).attr('height', height);
+        let svg = d3.select('#wpc_map').append('svg').attr("width",width).attr('height', height);
 
         let projection = d3.geoMercator();
         let path = d3.geoPath().projection(projection);
@@ -67,25 +67,23 @@
                 active.attr('opacity', '0.2')
                 d3.select("#info")
                         .classed("active", true);
-                if(d.properties.CTYUA21NM === d.properties.CTYUA21NMW) {
-                    d3.select('#ua_name').text(d.properties.CTYUA21NM);
-                } else {
-                    d3.select('#ua_name').text(`${d.properties.CTYUA21NM}/${d.properties.CTYUA21NMW}`);
+                if(d.properties.pcon21nm) {
+                    d3.select('#wpc_name').text(d.properties.pcon21nm);
                 }
-                d3.select('#ua_ons_cd').text(d.properties.CTYUA21CD);
+                d3.select('#wpc_ons_cd').text(d.properties.pcon21cd);
             }
         }
 
         Promise.all([
-            d3.json('data/wales_ua.topojson'),
-        ]).then(([ua_boundaries]) => {
+            d3.json('data/wpc_wales.topojson'),
+        ]).then(([wpc_boundaries]) => {
 
-            let ua = topojson.feature(ua_boundaries, ua_boundaries.objects.wales_ua);
+            let wpc = topojson.feature(wpc_boundaries, wpc_boundaries.objects.wpc_wales);
 
-            projection.fitSize([width, height], ua);
+            projection.fitSize([width, height], wpc);
 
             svg.selectAll('path')
-                .data(ua.features)
+                .data(wpc.features)
                 .join((enter) => {
                     enter.append('path')
                     .attr('d', path)

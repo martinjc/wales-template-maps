@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//d3js.org/d3.v6.min.js"></script>
     <script src="//unpkg.com/d3-hexjson"></script>
-    <title>Wales Senedd Constituency and Electoral Region Hexmap</title>
+    <title>Wales Westminster Parliamentary Constituencies Hexmap</title>
     <style>
         html,
         body {
@@ -23,11 +23,6 @@
             font-family: "Open Sans", sans-serif;
             color: #555;
         }
-        #sc_map, #scer_map {
-            display: block;
-            width: 45%;
-            float: left;
-        }
         #info {
             clear: both;
             visibility: hidden;
@@ -39,12 +34,11 @@
     </style>
 </head>
 <body>
-    <div id='sc_map'></div>
-    <div id="scer_map"></div>
-    <div id="info"><h1>This is <span id="sc_name"></span></h1></div>
+    <div id='wpc_map'></div>
+    <div id="info"><h1>This is <span id="wpc_name"></span> (<span id="wpc_ons_cd"></span>)</h1></div>
 
     <script>
-        let width = d3.select('#sc_map').node().clientWidth;
+        let width = d3.select('#wpc_map').node().clientWidth;
 
         let height = 600;
 
@@ -55,8 +49,7 @@
             right: 30
         }
 
-        let sc_svg = d3.select('#sc_map').append('svg').attr("width", width).attr('height', height);
-        let scer_svg = d3.select('#scer_map').append('svg').attr("width", width).attr('height', height);
+        let svg = d3.select('#wpc_map').append('svg').attr("width", width).attr('height', height);
 
         let projection = d3.geoMercator();
         let path = d3.geoPath().projection(projection);
@@ -81,38 +74,19 @@
                 active.attr('opacity', '0.2')
                 d3.select("#info")
                         .classed("active", true);
-                if (d.nawc21nm) {
-                    d3.select('#sc_name').text(d.nawc21nm);
-                } else if(d.nawer21nm) {
-                    d3.select('#sc_name').text(d.nawer21nm);
+                if (d.pcon21nm) {
+                    d3.select('#wpc_name').text(d.pcon21nm);
                 }
+                d3.select('#wpc_ons_cd').text(d.pcon21cd);
             }
         }
 
         Promise.all([
-            d3.json('data/nawc.hexjson'),
-            d3.json('data/nawer.hexjson')
-        ]).then(([sc_hexes, scer_hexes]) => {
-            sc_hexes = d3.renderHexJSON(sc_hexes, width-margin.left-margin.right, height-margin.top-margin.bottom);
-            let sc_hexmap = sc_svg.selectAll('g')
-                .data(sc_hexes)
-                .join((enter) => {
-                    enter.append('g')
-                        .attr('transform', (hex) => {
-                            return `translate(${hex.x+margin.left},${hex.y+margin.top})`;
-                        })
-                        .append('polygon')
-                        .attr('points', (hex) => hex.points)
-                        .attr('stroke', '#eee')
-                        .attr('fill', '#ccc')
-                        .attr('stroke-width', 2)
-                        .attr('id', (hex) => hex.key)
-                        .attr('data-name', (hex) => hex.name)
-                        .on('click', clicked);
-                });
-            scer_hexes = d3.renderHexJSON(scer_hexes, width-margin.left-margin.right, height-margin.top-margin.bottom);
-            let scer_hexmap = scer_svg.selectAll('g')
-                .data(scer_hexes)
+            d3.json('data/wpc.hexjson'),
+        ]).then(([wpc_hexes]) => {
+            wpc_hexes = d3.renderHexJSON(wpc_hexes, width-margin.left-margin.right, height-margin.top-margin.bottom);
+            let hexmap = svg.selectAll('g')
+                .data(wpc_hexes)
                 .join((enter) => {
                     enter.append('g')
                         .attr('transform', (hex) => {
