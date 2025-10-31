@@ -23,7 +23,7 @@
             font-family: "Open Sans", sans-serif;
             color: #555
         }
-        #sc_map, #scer_map {
+        #sc_map {
             display: block;
             width: 45%;
             float: left;
@@ -40,7 +40,6 @@
 </head>
 <body>
     <div id='sc_map'></div>
-    <div id="scer_map"></div>
     <div id="info"><h1>This is <span id="sc_name"></span></h1></div>  
     <script>
 
@@ -48,7 +47,6 @@
         let height = 600;
 
         let sc_svg = d3.select('#sc_map').append('svg').attr("width",width).attr('height', height);
-        let scer_svg = d3.select('#scer_map').append('svg').attr("width",width).attr('height', height);
 
         let projection = d3.geoMercator();
         let path = d3.geoPath().projection(projection);
